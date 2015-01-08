@@ -1,0 +1,7 @@
+project_name: django-rq
+project_root: ~/pyvenvs/django-random-queryset/
+windows:
+  - ranger: ranger
+  - tig: tig
+  - shell: ls -alh && git st
+

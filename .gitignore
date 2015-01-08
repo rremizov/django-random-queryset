@@ -1,0 +1,3 @@
+.vagrant/
+dist/
+django_random_queryset.egg-info/
