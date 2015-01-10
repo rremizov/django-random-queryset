@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+export DEBIAN_FRONTEND=noninteractive
+
+aptitude --assume-yes update
+aptitude --assume-yes install \
+	ca-certificates \
+	git-core\
+	python-dev \
+	python-pip \
+	python3-dev \
+	python3-pip \
+	ranger \
+	wget
+
+pip install tox
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+export DEBIAN_FRONTEND=noninteractive
+
+echo "deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main" \
+	>> /etc/apt/sources.list
+wget -O- https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+aptitude --assume-yes update
+aptitude --assume-yes install postgresql libpq-dev
+
