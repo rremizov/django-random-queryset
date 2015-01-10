@@ -4,8 +4,12 @@ import os
 
 def _parse_requirements(filename):
     result = set()
+    path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        'requirements',
+        filename)
 
-    for line in open(os.path.join('requirements', filename)):
+    for line in open(path):
         line = line.strip()
 
         if not line:
