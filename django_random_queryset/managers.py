@@ -1,5 +1,6 @@
 # encoding: utf-8
 
+import django
 from django.db import models
 
 from .queryset import RandomQuerySet
@@ -11,8 +12,14 @@ class RandomManager(models.Manager):
         try:
             return getattr(self.__class__, attr, *args)
         except AttributeError:
-            return getattr(self.get_query_set(), attr, *args)
+            return getattr(self.__get_queryset(), attr, *args)
 
-    def get_query_set(self):
+    def __get_queryset(self):
         return RandomQuerySet(self.model)
+
+    if django.VERSION[1] >= 7:
+        get_queryset = __get_queryset
+
+    else:
+        get_query_set = __get_queryset
 

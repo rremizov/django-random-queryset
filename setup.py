@@ -37,9 +37,12 @@ setup(
     url='http://github.com/rremizov/django-random-queryset',
 
     packages=(
-        'django-random-queryset',
+        'django_random_queryset',
     ),
     install_requires=_parse_requirements('pypi.txt'),
+
+    test_suite='tests.run_tests.run_all',
+    tests_require=_parse_requirements('dev.txt'),
 
     classifiers=(
         'Development Status :: 1 - Planning',

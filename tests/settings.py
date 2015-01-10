@@ -1,6 +1,8 @@
 # coding=utf-8
 import os
 
+SECRET_KEY = 'secret_key'
+
 DEFAULT_CHARSET = 'utf-8'
 
 MIDDLEWARE_CLASSES = (
@@ -24,14 +26,16 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'tests',
 )
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django-random-queryset',
-        'USER': 'django-random-queryset',
-        'PASSWORD': 'django-random-queryset',
+        'NAME': 'djangorandomqueryset',
+        'USER': 'djangorandomqueryset',
+        'PASSWORD': 'djangorandomqueryset',
         'HOST': 'localhost',
         'PORT': '5432',
     }

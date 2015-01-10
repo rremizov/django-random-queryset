@@ -1,1 +1,2 @@
 -r base.txt
+nose==1.3.4
