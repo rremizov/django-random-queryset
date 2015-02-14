@@ -15,7 +15,7 @@ def run_all(argv=None):
         argv = [
             'nosetests',
             '--with-coverage',
-            '--cover-package=django-random-query',
+            '--cover-package=django_random_query',
             '--cover-erase',
             '--verbose',
         ]

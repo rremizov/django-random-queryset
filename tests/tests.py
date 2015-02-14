@@ -8,5 +8,7 @@ class TestMain(TestCase):
 
     def test_main(self):
         self.assertEqual(ModelA.objects.random(5).count(), 5)
+
+        self.assertEqual(ModelA.objects.count(), 20)
         self.assertEqual(ModelA.objects.random(25).count(), 20)
 
