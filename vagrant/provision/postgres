@@ -12,3 +12,4 @@ aptitude --assume-yes install postgresql libpq-dev
 
 sudo -u postgres psql --command "CREATE USER djangorandomqueryset WITH SUPERUSER PASSWORD 'djangorandomqueryset';"
 sudo -u postgres createdb --encoding='utf-8' --template=template0 -O djangorandomqueryset djangorandomqueryset
+
