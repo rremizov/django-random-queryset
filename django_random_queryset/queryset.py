@@ -8,7 +8,12 @@ from django_random_queryset import strategies
 class RandomQuerySet(models.query.QuerySet):
 
     def __init__(self, *args, **kwargs):
-        self._strategy = kwargs.get('strategy', strategies.DEFAULT)
+
+        try:
+            self._strategy = kwargs.pop('strategy')
+
+        except KeyError:
+            self._strategy = strategies.DEFAULT
 
         super(RandomQuerySet, self).__init__(*args, **kwargs)
 
