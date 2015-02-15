@@ -1,17 +1,14 @@
 # encoding: utf-8
 
-import random
-
 from django.db import models
 
 from django_random_queryset import strategies
 
 
-
 class RandomQuerySet(models.query.QuerySet):
 
-    def __init__(self, strategy=strategies.DEFAULT, *args, **kwargs):
-        self._strategy = strategy
+    def __init__(self, *args, **kwargs):
+        self._strategy = kwargs.get('strategy', strategies.DEFAULT)
 
         super(RandomQuerySet, self).__init__(*args, **kwargs)
 
