@@ -77,7 +77,7 @@ def main():
 
     results = [test.result() for test in tests]
 
-    with open('results.json', 'w') as fh:
+    with open('benchmark.json', 'w') as fh:
         json.dump(dict(results=results), fh, indent=4)
 
 
