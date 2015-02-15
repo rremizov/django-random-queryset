@@ -33,7 +33,7 @@ setup(
     license='MIT',
     platforms=('any', ),
     description='',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     url='http://github.com/rremizov/django-random-queryset',
 
     packages=(
