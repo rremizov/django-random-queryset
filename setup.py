@@ -31,39 +31,33 @@ setup(
     author_email='rremizov@yandex.ru',
 
     license='MIT',
-    platforms=('any', ),
+    platforms=['any'],
     description="The extension gives you ability to pull random records using Django's ORM.",
     long_description=open('README.rst').read(),
     url='http://github.com/rremizov/django-random-queryset',
 
-    packages=(
+    packages=[
         'django_random_queryset',
-    ),
+    ],
     install_requires=_parse_requirements('pypi.txt'),
 
     test_suite='tests.run_tests.run_all',
     tests_require=_parse_requirements('dev.txt'),
 
-    classifiers=(
+    classifiers=[
         'Development Status :: 4 - Beta',
-        # 'Development Status :: 5 - Production/Stable',
-
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
-        # 'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
-        # 'Programming Language :: Python :: 3.3',
-        # 'Programming Language :: Python :: 3.4',
-
         'Framework :: Django',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Topic :: Internet :: WWW/HTTP',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-    )
+        'Topic :: Software Development :: Libraries :: Python Modules'
+    ]
 )
 
