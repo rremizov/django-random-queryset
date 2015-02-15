@@ -32,7 +32,7 @@ setup(
 
     license='MIT',
     platforms=('any', ),
-    description='',
+    description="The extension gives you ability to pull random records using Django's ORM.",
     long_description=open('README.rst').read(),
     url='http://github.com/rremizov/django-random-queryset',
 
