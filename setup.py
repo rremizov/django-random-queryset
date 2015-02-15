@@ -45,14 +45,15 @@ setup(
     tests_require=_parse_requirements('dev.txt'),
 
     classifiers=(
-        'Development Status :: 1 - Planning',
+        'Development Status :: 4 - Beta',
         # 'Development Status :: 5 - Production/Stable',
+
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        # 'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2',
         # 'Programming Language :: Python :: 2.6',
-        # 'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
         # 'Programming Language :: Python :: 3.3',
@@ -63,8 +64,6 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Software Development :: Libraries :: Python Modules',
-    ),
-
-    # include_package_data=True,
+    )
 )
 
