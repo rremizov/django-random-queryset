@@ -1,5 +1,6 @@
 project_name: django-rq
 project_root: ~/pyvenvs/django-random-queryset/
+pre_window: source ./pyenv/bin/activate 
 windows:
   - ranger: ranger
   - tig: tig
