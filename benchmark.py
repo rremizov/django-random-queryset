@@ -55,10 +55,6 @@ def main():
 
     tests = list()
     tests.extend([
-        Test(i, 'brute_force')
-        for i in drange(1, 2500, 100)
-    ])
-    tests.extend([
         Test(i, 'index_selection')
         for i in drange(1, 10000, 100)
     ])

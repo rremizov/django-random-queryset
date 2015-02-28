@@ -8,7 +8,6 @@ from django_random_queryset import managers, strategies
 class ModelA(models.Model):
     uuid = models.CharField(default=lambda: str(uuid.uuid4()), max_length=128)
 
-    brute_force = managers.RandomManager(strategy=strategies.brute_force)
     index_selection = managers.RandomManager(strategy=strategies.index_selection)
     index_exclusion = managers.RandomManager(strategy=strategies.index_exclusion)
     index_combo = managers.RandomManager(strategy=strategies.index_combo)
