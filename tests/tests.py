@@ -18,3 +18,7 @@ class TestMain(TestCase):
         self.assertEqual(ModelA.index_combo.random(5).count(), 5)
         self.assertEqual(ModelA.index_combo.random(25).count(), 20)
 
+    def test_empty_queryset(self):
+        ModelA.objects.all().delete()
+        ModelA.objects.random(1)
+
