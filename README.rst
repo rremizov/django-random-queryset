@@ -7,7 +7,7 @@ The extension gives you ability to pull random records using Django's ORM.
 Requirements
 ------------
 
-Python 2.7 or 3.2, Django 1.5+.
+Python 2.7, 3.2, 3.3, 3.4, Django 1.5+.
 
 
 Installation
