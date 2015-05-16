@@ -1,0 +1,41 @@
+language: python
+python: 2.7
+on:
+  tags: true
+addons:
+  postgresql: "9.3"
+env:
+  - TOXENV=py27-dj13
+  - TOXENV=py27-dj14
+  - TOXENV=py27-dj15
+  - TOXENV=py27-dj16
+  - TOXENV=py27-dj17
+  - TOXENV=py27-dj18
+  - TOXENV=py27-djangomaster
+  - TOXENV=py33-dj15
+  - TOXENV=py33-dj16
+  - TOXENV=py33-dj17
+  - TOXENV=py33-dj18
+  - TOXENV=py33-djangomaster
+  - TOXENV=py33-dj15
+  - TOXENV=py33-dj16
+  - TOXENV=py33-dj17
+  - TOXENV=py33-dj18
+  - TOXENV=py33-djangomaster
+  - TOXENV=py34-dj15
+  - TOXENV=py34-dj16
+  - TOXENV=py34-dj17
+  - TOXENV=py34-dj18
+  - TOXENV=py34-djangomaster
+matrix:
+  allow_failures:
+    - env: "TOXENV=py27-djangomaster"
+    - env: "TOXENV=py33-djangomaster"
+    - env: "TOXENV=py34-djangomaster"
+install:
+  - pip install tox
+before_script:
+  - psql -U postgres -c "create role djangorandomqueryset login superuser"
+script:
+  - tox
+
