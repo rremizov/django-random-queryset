@@ -3,3 +3,5 @@ flake8
 ipdb
 jedi
 pylint-django==0.6
+restructuredtext-lint
+pygments

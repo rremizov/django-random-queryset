@@ -1,5 +1,5 @@
 django-random-queryset |Build status|
-======================
+=====================================
 
 The extension gives you ability to pull random records using Django's ORM.
 
