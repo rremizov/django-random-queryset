@@ -26,7 +26,7 @@ def _parse_requirements(filename):
 
 setup(
     name='django-random-queryset',
-    version='0.0.1',
+    version='0.0.2',
     author='Roman M. Remizov',
     author_email='rremizov@yandex.ru',
 
