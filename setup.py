@@ -42,7 +42,7 @@ setup(
     install_requires=_parse_requirements('pypi.txt'),
 
     test_suite='tests.run_tests.run_all',
-    tests_require=_parse_requirements('dev.txt'),
+    tests_require=_parse_requirements('pypi-test.txt'),
 
     classifiers=[
         'Development Status :: 4 - Beta',

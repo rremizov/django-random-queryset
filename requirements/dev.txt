@@ -1,6 +1,5 @@
--r base.txt
+-r pypi-test.txt
 flake8
 ipdb
 jedi
-nose==1.3.4
 pylint-django==0.6
