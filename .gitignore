@@ -1,5 +1,7 @@
 *.egg-info
 *.pyc
+.emacs.desktop
+.emacs.desktop.lock
 .tox/
 .vagrant/
 __pycache__/
