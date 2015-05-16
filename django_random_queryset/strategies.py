@@ -53,6 +53,9 @@ def index_exclusion(amount, available_ids):
 
 def index_combo(amount, available_ids):
 
+    if not available_ids:
+        return set()
+
     if float(amount) / len(available_ids) < 0.5:
         return index_selection(amount, available_ids)
 
