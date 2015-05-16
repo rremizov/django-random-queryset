@@ -13,7 +13,11 @@ if hasattr(django, 'setup'):
     django.setup()
 
 
-from django.test.simple import DjangoTestSuiteRunner
+try:
+    from django.test.runner import DiscoverRunner as TestSuiteRunner
+except ImportError:
+    from django.test.simple import DjangoTestSuiteRunner as TestSuiteRunner
+
 
 test_runner = None
 old_config = None
@@ -22,7 +26,7 @@ def setup():
     global test_runner
     global old_config
 
-    test_runner = DjangoTestSuiteRunner()
+    test_runner = TestSuiteRunner()
     test_runner.setup_test_environment()
     old_config = test_runner.setup_databases()
 
