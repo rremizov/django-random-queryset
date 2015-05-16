@@ -1,4 +1,4 @@
-django-random-queryset
+django-random-queryset |Build status|
 ======================
 
 The extension gives you ability to pull random records using Django's ORM.
@@ -47,3 +47,6 @@ Use it:
     queryset.random(5)  # pass amount to get more records
     queryset.random().values()  # other queryset methods available
 
+
+.. |Build status| image:: https://travis-ci.org/rremizov/django-random-queryset.svg?branch=master
+   :target: https://travis-ci.org/Suor/django-cacheops
