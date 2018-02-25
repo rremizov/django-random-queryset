@@ -3,20 +3,10 @@
 import django
 from django.db import models
 
-from . import queryset, strategies
+from . import queryset
 
 
 class RandomManager(models.Manager):
-
-    def __init__(self, *args, **kwargs):
-
-        try:
-            self._strategy = kwargs.pop('strategy')
-
-        except KeyError:
-            self._strategy = strategies.DEFAULT
-
-        super(RandomManager, self).__init__(*args, **kwargs)
 
     def __getattr__(self, attr, *args):
         try:
@@ -25,11 +15,9 @@ class RandomManager(models.Manager):
             return getattr(self.__get_queryset(), attr, *args)
 
     def __get_queryset(self):
-        return queryset.RandomQuerySet(self.model, strategy=self._strategy)
+        return queryset.RandomQuerySet(self.model)
 
     if django.VERSION[1] >= 7:
         get_queryset = __get_queryset
-
     else:
         get_query_set = __get_queryset
-

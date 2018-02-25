@@ -14,9 +14,6 @@ def run_all(argv=None):
     if argv is None:
         argv = [
             'nosetests',
-            '--with-coverage',
-            '--cover-package=django_random_query',
-            '--cover-erase',
             '--verbose',
         ]
 

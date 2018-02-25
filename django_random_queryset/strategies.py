@@ -1,67 +1,31 @@
 # encoding: utf-8
+from __future__ import division
 
+import math
 import random
 
 
-def index_selection(amount, available_ids):
-    """
-    Slow with (amount / len(available_ids)) close to 1.
-    """
-
-    if amount < 1:
-        raise ValueError("'amount' is a positive integer value")
-
-    available_ids_length = len(available_ids)
-
-    if amount > available_ids_length:
-        return available_ids
-
-    selected_indexes = set()
-
-    while len(selected_indexes) < amount:
-        selected_indexes.add(random.randint(0, available_ids_length - 1))
-
-    return {available_ids[index] for index in selected_indexes}
+class SmallPopulationSize(Exception):
+    pass
 
 
-def index_exclusion(amount, available_ids):
-    """
-    For cases with (amount / len(available_ids)) close to 1.
-    """
-
-    if amount < 1:
-        raise ValueError("'amount' is a positive integer value")
-
-    available_ids_length = len(available_ids)
-
-    if amount > available_ids_length:
-        return available_ids
-
-    excluded_indexes = set()
-    amount_to_exclude = available_ids_length - amount
-
-    while len(excluded_indexes) < amount_to_exclude:
-        excluded_indexes.add(random.randint(0, available_ids_length - 1))
-
-    selected_ids = set(available_ids)
-
-    for index in excluded_indexes:
-        selected_ids.remove(available_ids[index])
-
-    return selected_ids
+def min_max(sample_size, min_id, max_id, rows_count):
+    assert (max_id - min_id) + 1 == rows_count
+    population = list(range(min_id, max_id + 1))
+    return random.sample(population, sample_size)
 
 
-def index_combo(amount, available_ids):
+def min_max_count(desired_sample_size, min_id, max_id, rows_count):
+    assert (max_id - min_id) + 1 >= rows_count, '{}, {}, {}'.format(min_id, max_id, rows_count)
+    id_holes_amount = (max_id - min_id) + 1 - rows_count
+    id_holes_ratio = id_holes_amount / (max_id - min_id)
+    assert 0 <= id_holes_ratio <= 1
 
-    if not available_ids:
-        return set()
+    population = list(range(min_id, max_id + 1))
+    actual_sample_size = int(math.ceil(desired_sample_size * max(1, math.ceil(1 / id_holes_ratio))))
+    actual_sample_size *= 10
 
-    if float(amount) / len(available_ids) < 0.5:
-        return index_selection(amount, available_ids)
+    if actual_sample_size >= rows_count or actual_sample_size > len(population):
+        raise SmallPopulationSize()
 
-    else:
-        return index_exclusion(amount, available_ids)
-
-
-DEFAULT = index_combo
-
+    return random.sample(population, actual_sample_size)
