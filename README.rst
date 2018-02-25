@@ -49,4 +49,4 @@ Use it:
 
 
 .. |Build status| image:: https://travis-ci.org/rremizov/django-random-queryset.svg?branch=master
-   :target: https://travis-ci.org/Suor/django-cacheops
+   :target: https://travis-ci.org/rremizov/django-random-queryset
