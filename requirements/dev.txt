@@ -1,7 +1,7 @@
--r pypi-test.txt
+-r base.txt
 flake8
-ipdb
 jedi
+nose==1.3.4
+pygments
 pylint-django==0.6
 restructuredtext-lint
-pygments

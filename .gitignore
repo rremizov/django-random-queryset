@@ -1,5 +1,6 @@
 *.egg-info
 *.pyc
+.eggs
 .emacs.desktop
 .emacs.desktop.lock
 .tox/

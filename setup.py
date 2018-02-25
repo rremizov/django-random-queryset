@@ -1,9 +1,10 @@
-from setuptools import setup
 import os
+
+from setuptools import setup
 
 
 def _parse_requirements(filename):
-    result = set()
+    result = list()
     path = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
         'requirements',
@@ -16,10 +17,9 @@ def _parse_requirements(filename):
             continue
 
         if line.startswith('-r'):
-            result = result.union(_parse_requirements(line.split(' ')[1]))
-
+            result.extend(_parse_requirements(line.split(' ')[1]))
         else:
-            result.add(line)
+            result.append(line)
 
     return result
 
@@ -39,13 +39,13 @@ setup(
     packages=[
         'django_random_queryset',
     ],
-    install_requires=_parse_requirements('pypi.txt'),
+    install_requires=_parse_requirements('base.txt'),
 
     test_suite='tests.run_tests.run_all',
-    tests_require=_parse_requirements('pypi-test.txt'),
+    tests_require=_parse_requirements('test.txt'),
 
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
@@ -60,4 +60,3 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules'
     ]
 )
-
