@@ -1,3 +1,6 @@
+test:
+	tox --skip-missing-interpreters
+
 develop:
 	python setup.py develop
 

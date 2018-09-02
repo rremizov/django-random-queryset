@@ -1,7 +1,10 @@
--r base.txt
 flake8
+isort
 jedi
 nose==1.3.4
+psycopg2==2.7.5
 pygments
 pylint-django==0.6
 restructuredtext-lint
+tox==2.9.1
+yapf

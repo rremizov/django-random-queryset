@@ -1,40 +1,91 @@
+dist: trusty
 language: python
-python: 2.7
+cache: pip
+python:
+  - 2.7
+  - 3.4
+  - 3.5
+  - 3.6
+  - 3.7
 on:
   tags: true
 addons:
   postgresql: "9.3"
 env:
-  - TOXENV=py27-django15
-  - TOXENV=py27-django16
-  - TOXENV=py27-django17
-  - TOXENV=py27-django18
-  - TOXENV=py27-djangomaster
-  - TOXENV=py33-django15
-  - TOXENV=py33-django16
-  - TOXENV=py33-django17
-  - TOXENV=py33-django18
-  - TOXENV=py33-djangomaster
-  - TOXENV=py33-django15
-  - TOXENV=py33-django16
-  - TOXENV=py33-django17
-  - TOXENV=py33-django18
-  - TOXENV=py33-djangomaster
-  - TOXENV=py34-django15
-  - TOXENV=py34-django16
-  - TOXENV=py34-django17
-  - TOXENV=py34-django18
-  - TOXENV=py34-djangomaster
+  - DJANGO=1.7
+  - DJANGO=1.8
+  - DJANGO=1.9
+  - DJANGO=1.10
+  - DJANGO=1.11
+  - DJANGO=2.0
+  - DJANGO=2.1
+  - DJANGO=master
 matrix:
+  include:
+    - python: 2.7
+      env: DJANGO=1.11
+
+    - python: 3.4
+      env: DJANGO=1.11
+    - python: 3.5
+      env: DJANGO=1.11
+    - python: 3.6
+      env: DJANGO=1.11
+    - python: 3.7
+      env: DJANGO=1.11
+
+    - python: 3.4
+      env: DJANGO=2.0
+    - python: 3.5
+      env: DJANGO=2.0
+    - python: 3.6
+      env: DJANGO=2.0
+    - python: 3.7
+      env: DJANGO=2.0
+
+    - python: 3.5
+      env: DJANGO=2.1
+    - python: 3.6
+      env: DJANGO=2.1
+    - python: 3.7
+      env: DJANGO=2.1
+
+    - python: 3.5
+      env: DJANGO=master
+    - python: 3.6
+      env: DJANGO=master
+    - python: 3.7
+      env: DJANGO=master
+
   allow_failures:
-    - env: "TOXENV=py27-djangomaster"
-    - env: "TOXENV=py33-djangomaster"
-    - env: "TOXENV=py34-djangomaster"
+    - python: 3.5
+      env: DJANGO=master
+    - python: 3.6
+      env: DJANGO=master
+    - python: 3.7
+      env: DJANGO=master
+
+    - python: 3.7
+      env: DJANGO=1.7
+    - python: 3.7
+      env: DJANGO=1.8
+    - python: 3.7
+      env: DJANGO=1.9
+    - python: 3.7
+      env: DJANGO=1.10
+    - python: 3.7
+      env: DJANGO=1.11
+    - python: 3.7
+      env: DJANGO=2.0
+    - python: 3.7
+      env: DJANGO=2.1
+    - python: 3.7
+      env: DJANGO=master
+
 install:
-  - pip install tox
+  - pip install tox-travis
 before_script:
-  - psql -U postgres -c "create role djangorandomqueryset login superuser"
-  - psql -U postgres -c "create database djangorandomqueryset owner djangorandomqueryset"
+  - psql -U postgres -c "CREATE ROLE djangorandomqueryset LOGIN SUPERUSER"
+  - psql -U postgres -c "CREATE DATABASE djangorandomqueryset OWNER djangorandomqueryset"
 script:
   - tox
-
