@@ -3,30 +3,9 @@ import os
 from setuptools import setup
 
 
-def _parse_requirements(filename):
-    result = list()
-    path = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)),
-        'requirements',
-        filename)
-
-    for line in open(path):
-        line = line.strip()
-
-        if not line:
-            continue
-
-        if line.startswith('-r'):
-            result.extend(_parse_requirements(line.split(' ')[1]))
-        else:
-            result.append(line)
-
-    return result
-
-
 setup(
     name='django-random-queryset',
-    version='0.0.4',
+    version='0.1.0',
     author='Roman M. Remizov',
     author_email='rremizov@yandex.ru',
 
@@ -39,10 +18,11 @@ setup(
     packages=[
         'django_random_queryset',
     ],
-    install_requires=_parse_requirements('base.txt'),
+    install_requires=[
+        'django>=1.7',
+    ],
 
     test_suite='tests.run_tests.run_all',
-    tests_require=_parse_requirements('test.txt'),
 
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -52,8 +32,18 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.2',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Framework :: Django',
+        'Framework :: Django :: 1.7',
+        'Framework :: Django :: 1.8',
+        'Framework :: Django :: 1.9',
+        'Framework :: Django :: 1.10',
+        'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.0',
+        'Framework :: Django :: 2.1',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Topic :: Internet :: WWW/HTTP',

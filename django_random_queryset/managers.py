@@ -8,11 +8,8 @@ from . import queryset
 
 class RandomManager(models.Manager):
 
-    def __getattr__(self, attr, *args):
-        try:
-            return getattr(self.__class__, attr, *args)
-        except AttributeError:
-            return getattr(self.__get_queryset(), attr, *args)
+    def random(self, *args, **kwargs):
+        return self.__get_queryset().random(*args, **kwargs)
 
     def __get_queryset(self):
         return queryset.RandomQuerySet(self.model)
