@@ -14,7 +14,7 @@ class RandomManager(models.Manager):
     def __get_queryset(self):
         return queryset.RandomQuerySet(self.model)
 
-    if django.VERSION[1] >= 7:
-        get_queryset = __get_queryset
-    else:
+    if django.VERSION[0] == 1 and django.VERSION[1] < 7:
         get_query_set = __get_queryset
+    else:
+        get_queryset = __get_queryset
