@@ -1,8 +1,7 @@
-project_name: django-rq
+project_name: django-random-queryset
 project_root: ~/pyvenvs/django-random-queryset/
-pre_window: source ./pyenv/bin/activate 
+pre_window: pyenv activate django-random-queryset
 windows:
   - ranger: ranger
   - tig: tig
   - shell: ls -alh && git st
-
