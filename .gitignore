@@ -3,6 +3,7 @@
 .eggs
 .emacs.desktop
 .emacs.desktop.lock
+.idea
 .tox/
 .vagrant/
 __pycache__/
