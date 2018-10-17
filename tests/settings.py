@@ -26,9 +26,9 @@ INSTALLED_APPS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangorandomqueryset',
-        'USER': 'djangorandomqueryset',
-        'PASSWORD': 'djangorandomqueryset',
+        'NAME': 'django_random_queryset',
+        'USER': 'django_random_queryset',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '5432',
     }
