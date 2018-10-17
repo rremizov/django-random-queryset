@@ -4,6 +4,7 @@
 .emacs.desktop
 .emacs.desktop.lock
 .idea
+.ray-session.json
 .tox/
 .vagrant/
 __pycache__/

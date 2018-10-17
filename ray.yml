@@ -1,0 +1,12 @@
+module: django_random_queryset
+
+baseline: 10
+
+exclude-modules:
+
+test-runner:
+  name: pytest
+  args:
+
+execution-engine:
+  name: local

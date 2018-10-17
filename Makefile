@@ -1,5 +1,7 @@
 test:
-	tox --skip-missing-interpreters
+	DJANGO_SETTINGS_MODULE=tests.settings cosmic-ray init ray.yml .ray-session
+	DJANGO_SETTINGS_MODULE=tests.settings cosmic-ray exec .ray-session
+	cosmic-ray dump .ray-session | cr-report
 
 develop:
 	python setup.py develop

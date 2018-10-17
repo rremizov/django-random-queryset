@@ -1,3 +1,5 @@
+cosmic-ray-pytest==1.0.1
+cosmic-ray==3.1.2
 flake8
 isort
 jedi
