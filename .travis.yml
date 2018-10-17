@@ -85,7 +85,7 @@ matrix:
 install:
   - pip install tox-travis
 before_script:
-  - psql -U postgres -c "CREATE ROLE djangorandomqueryset LOGIN SUPERUSER"
-  - psql -U postgres -c "CREATE DATABASE djangorandomqueryset OWNER djangorandomqueryset"
+  - psql -U postgres -c "CREATE ROLE django_random_queryset LOGIN SUPERUSER"
+  - psql -U postgres -c "CREATE DATABASE django_random_queryset OWNER django_random_queryset"
 script:
   - tox
