@@ -8,7 +8,7 @@ Requirements
 ------------
 
 - Python 2.7, 3.4, 3.5, 3.6, 3.7
-- Django 1.7+.
+- Django 1.8+.
 - Postgres
 
 
