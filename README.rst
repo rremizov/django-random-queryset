@@ -7,8 +7,8 @@ Pull random records using Django ORM.
 Requirements
 ------------
 
-- Python 2.7, 3.4, 3.5, 3.6, 3.7
-- Django 1.8+.
+- Python 2.7, 3.6, 3.7
+- Django 1.11+.
 - Postgres
 
 
