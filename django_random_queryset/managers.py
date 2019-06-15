@@ -7,7 +7,6 @@ from . import queryset
 
 
 class RandomManager(models.Manager):
-
     def random(self, *args, **kwargs):
         return self.__get_queryset().random(*args, **kwargs)
 

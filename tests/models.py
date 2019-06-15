@@ -1,7 +1,6 @@
 import uuid
 
 from django.db import models
-
 from django_random_queryset import managers
 
 
