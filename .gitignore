@@ -4,6 +4,7 @@
 .emacs.desktop
 .emacs.desktop.lock
 .idea
+.mypy_cache
 .tox/
 .vagrant/
 __pycache__/
