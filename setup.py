@@ -1,6 +1,5 @@
 from setuptools import setup
 
-
 setup(
     name='django-random-queryset',
     version='0.1.1',
@@ -17,7 +16,7 @@ setup(
         'django_random_queryset',
     ],
     install_requires=[
-        'django>=1.7',
+        'django>=1.11',
     ],
 
     test_suite='tests.run_tests.run_all',
