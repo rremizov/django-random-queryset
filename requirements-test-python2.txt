@@ -3,6 +3,6 @@ isort==4.3.20
 psycopg2-binary==2.8.3
 pylint-django==0.6
 pytest-benchmark==3.1.1
-pytest-django==3.4.3
+pytest-django==3.5.1
 pytest==3.8.2
 tox==3.13.2
