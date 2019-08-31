@@ -1,66 +1,38 @@
-dist: trusty
+dist: bionic
 language: python
 cache: pip
-python:
-  - 2.7
-  - 3.6
-  - 3.7
 on:
   tags: true
 addons:
-  postgresql: "9.3"
-env:
-  - DJANGO=1.11
-  - DJANGO=2.0
-  - DJANGO=2.1
-  - DJANGO=master
+  postgresql: "10"
 matrix:
   include:
-    - python: 2.7
-      env: DJANGO=1.11
+  - python: "2.7"
+    env: DJANGO=1.11
 
-    - python: 3.6
-      env: DJANGO=1.11
-    - python: 3.7
-      env: DJANGO=1.11
+  - python: "3.6"
+    env: DJANGO=1.11
+  - python: "3.6"
+    env: DJANGO=2.0
+  - python: "3.6"
+    env: DJANGO=2.1
+  - python: "3.6"
+    env: DJANGO=master
 
-    - python: 3.6
-      env: DJANGO=2.0
-    - python: 3.7
-      env: DJANGO=2.0
-
-    - python: 3.6
-      env: DJANGO=2.1
-    - python: 3.7
-      env: DJANGO=2.1
-
-    - python: 3.6
-      env: DJANGO=master
-    - python: 3.7
-      env: DJANGO=master
+  - python: "3.7"
+    env: DJANGO=1.11
+  - python: "3.7"
+    env: DJANGO=2.0
+  - python: "3.7"
+    env: DJANGO=2.1
+  - python: "3.7"
+    env: DJANGO=master
 
   allow_failures:
-    - python: 3.6
-      env: DJANGO=master
-    - python: 3.7
-      env: DJANGO=master
-
-    - python: 3.7
-      env: DJANGO=1.7
-    - python: 3.7
-      env: DJANGO=1.8
-    - python: 3.7
-      env: DJANGO=1.9
-    - python: 3.7
-      env: DJANGO=1.10
-    - python: 3.7
-      env: DJANGO=1.11
-    - python: 3.7
-      env: DJANGO=2.0
-    - python: 3.7
-      env: DJANGO=2.1
-    - python: 3.7
-      env: DJANGO=master
+  - python: "3.6"
+    env: DJANGO=master
+  - python: "3.7"
+    env: DJANGO=master
 
 install:
   - pip install tox-travis
