@@ -2,6 +2,7 @@
 
 from django.db import models
 from django.db.models import Count, Max, Min
+
 from django_random_queryset import strategies
 
 
