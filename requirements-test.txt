@@ -1,5 +1,5 @@
 black==19.3b0
-flake8==3.7.8
+flake8==3.7.9
 isort==4.3.21
 mypy==0.740
 psycopg2-binary==2.8.4
