@@ -6,5 +6,5 @@ psycopg2-binary==2.8.4
 pylint-django==2.0.11
 pytest-benchmark==3.2.2
 pytest-django==3.7.0
-pytest==5.1.1
+pytest==5.3.1
 tox==3.14.2
