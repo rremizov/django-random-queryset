@@ -2,12 +2,12 @@ from setuptools import setup
 
 setup(
     name='django-random-queryset',
-    version='0.1.2',
+    version='0.1.3',
     author='Roman M. Remizov',
     author_email='rremizov@yandex.ru',
     license='MIT',
     platforms=['any'],
-    description="The extension gives you ability to pull random records using Django's ORM.",
+    description="Pull random records using Django ORM.",
     long_description=open('README.rst').read(),
     url='http://github.com/rremizov/django-random-queryset',
     packages=['django_random_queryset'],
