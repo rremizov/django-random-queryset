@@ -3,6 +3,9 @@ language: python
 cache: pip
 on:
   tags: true
+services:
+  - postgresql
+  - mysql
 addons:
   postgresql: "10"
 matrix:
@@ -43,5 +46,8 @@ install:
 before_script:
   - psql -U postgres -c "CREATE ROLE django_random_queryset LOGIN SUPERUSER"
   - psql -U postgres -c "CREATE DATABASE django_random_queryset OWNER django_random_queryset"
+  - mysql -u root -e "create user django_random_queryset@localhost"
+  - mysql -u root -e "grant all on *.* to django_random_queryset@localhost"
+  - mysql -e "create database django_random_queryset"
 script:
   - tox
