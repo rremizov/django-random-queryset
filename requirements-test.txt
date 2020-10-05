@@ -1,5 +1,5 @@
 black==20.8b1
-flake8==3.8.3
+flake8==3.8.4
 isort==5.5.4
 mypy==0.782
 mysqlclient==2.0.1
