@@ -53,5 +53,5 @@ How to use it:
     queryset.random().values()  # to have access to other queryset methods 
 
 
-.. |Build status| image:: https://travis-ci.org/rremizov/django-random-queryset.svg?branch=master
-   :target: https://travis-ci.org/rremizov/django-random-queryset
+.. |Build status| image:: https://travis-ci.com/rremizov/django-random-queryset.svg?branch=master
+   :target: https://travis-ci.com/rremizov/django-random-queryset
