@@ -20,25 +20,25 @@ ROOT_URLCONF = "tests.urls"
 
 INSTALLED_APPS = ("django.contrib.auth", "django.contrib.contenttypes", "tests")
 
-if os.environ.get("TEST_DATABASE_ENGINE") == "postgresql":
+if os.environ["TEST_DATABASE_ENGINE"] == "postgresql":
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
             "NAME": "django_random_queryset",
             "USER": "django_random_queryset",
             "PASSWORD": "password",
-            "HOST": "localhost",
+            "HOST": os.environ["POSTGRES_HOST"],
             "PORT": "5432",
         }
     }
-elif os.environ.get("TEST_DATABASE_ENGINE") == "mysql":
+elif os.environ["TEST_DATABASE_ENGINE"] == "mysql":
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.mysql",
             "NAME": "django_random_queryset",
             "USER": "django_random_queryset",
             "PASSWORD": "",
-            "HOST": "",
+            "HOST": os.environ["MYSQL_HOST"],
         }
     }
 else:
