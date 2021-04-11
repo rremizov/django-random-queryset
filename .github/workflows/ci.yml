@@ -4,12 +4,12 @@ name: CI
   pull_request:
   push:
     branches:
-      - master
+      - "*"
 
 jobs:
   run-tests:
     name: Run Tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     container: python:${{ matrix.env.python }}-buster
 
     strategy:
