@@ -6,6 +6,6 @@ mysqlclient==2.0.3
 psycopg2-binary==2.8.6
 pylint-django==2.4.4
 pytest-benchmark==3.4.1
-pytest-django==4.3.0
+pytest-django==4.4.0
 pytest==6.2.4
 tox==3.23.1
