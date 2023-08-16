@@ -36,9 +36,10 @@ elif os.environ["TEST_DATABASE_ENGINE"] == "mysql":
         "default": {
             "ENGINE": "django.db.backends.mysql",
             "NAME": "django_random_queryset",
-            "USER": "django_random_queryset",
-            "PASSWORD": "",
+            "USER": "root",
+            "PASSWORD": "password",
             "HOST": os.environ["MYSQL_HOST"],
+            "PORT": "3306",
         }
     }
 else:
