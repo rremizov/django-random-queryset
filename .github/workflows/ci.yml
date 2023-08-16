@@ -19,85 +19,43 @@ jobs:
           - postgresql
           - mysql
         env:
-          - python: 2.7
-            django: 1.11
-            tox-env: py27-dj111
+          - python: "3.8"
+            django: "3.2"
+            tox-env: "py38-dj32"
+          - python: "3.8"
+            django: "4.0"
+            tox-env: "py38-dj40"
 
-          - python: 3.6
-            django: 1.11
-            tox-env: py36-dj111
-          - python: 3.6
-            django: 2.0
-            tox-env: py36-dj20
-          - python: 3.6
-            django: 2.1
-            tox-env: py36-dj21
-          - python: 3.6
-            django: 2.2
-            tox-env: py36-dj22
-          - python: 3.6
-            django: 3.0
-            tox-env: py36-dj30
-          - python: 3.6
-            django: 3.1
-            tox-env: py36-dj31
+          - python: "3.9"
+            django: "3.2"
+            tox-env: "py39-dj32"
+          - python: "3.9"
+            django: "4.0"
+            tox-env: "py39-dj40"
 
-          - python: 3.7
-            django: 1.11
-            tox-env: py37-dj111
-          - python: 3.7
-            django: 2.0
-            tox-env: py37-dj20
-          - python: 3.7
-            django: 2.1
-            tox-env: py37-dj21
-          - python: 3.7
-            django: 2.2
-            tox-env: py37-dj22
-          - python: 3.7
-            django: 3.0
-            tox-env: py37-dj30
-          - python: 3.7
-            django: 3.1
-            tox-env: py37-dj31
+          - python: "3.10"
+            django: "3.2"
+            tox-env: "py310-dj32"
+          - python: "3.10"
+            django: "4.0"
+            tox-env: "py310-dj40"
+          - python: "3.10"
+            django: "4.1"
+            tox-env: "py310-dj41"
 
-          - python: 3.8
-            django: 1.11
-            tox-env: py38-dj111
-          - python: 3.8
-            django: 2.0
-            tox-env: py38-dj20
-          - python: 3.8
-            django: 2.1
-            tox-env: py38-dj21
-          - python: 3.8
-            django: 2.2
-            tox-env: py38-dj22
-          - python: 3.8
-            django: 3.0
-            tox-env: py38-dj30
-          - python: 3.8
-            django: 3.1
-            tox-env: py38-dj31
+          - python: "3.11"
+            django: "4.1"
+            tox-env: "py311-dj41"
+          - python: "3.11"
+            django: "4.2"
+            tox-env: "py311-dj42"
 
-#          - python: 3.9
-#            django: 1.11
-#            tox-env: py39-dj111
-#          - python: 3.9
-#            django: 2.0
-#            tox-env: py39-dj20
-#          - python: 3.9
-#            django: 2.1
-#            tox-env: py39-dj21
-#          - python: 3.9
-#            django: 2.2
-#            tox-env: py39-dj22
-#          - python: 3.9
-#            django: 3.0
-#            tox-env: py39-dj30
-#          - python: 3.9
-#            django: 3.1
-#            tox-env: py39-dj31
+#          - python: "3.12"
+#            django: "4.1"
+#            tox-env: "py312-dj41"
+#          - python: "3.12"
+#            django: "4.2"
+#            tox-env: "py312-dj42"
 
     services:
       postgres:
