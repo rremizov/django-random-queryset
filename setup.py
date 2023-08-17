@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="django-random-queryset",
-    version="0.1.3",
+    version="0.2.0",
     author="Roman Remizov",
     author_email="rremizov@yandex.ru",
     license="MIT",
@@ -11,7 +11,7 @@ setup(
     long_description=open("README.rst").read(),
     url="http://github.com/rremizov/django-random-queryset",
     packages=["django_random_queryset"],
-    install_requires=["django>=1.11.27"],
+    install_requires=["django>=3.2"],
     test_suite="tests.run_tests.run_all",
     classifiers=[
         "Development Status :: 3 - Alpha",

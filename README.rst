@@ -1,5 +1,5 @@
-django-random-queryset |Build status|
-=====================================
+django-random-queryset
+======================
 
 Pull random records using Django ORM.
 
@@ -7,8 +7,8 @@ Pull random records using Django ORM.
 Requirements
 ------------
 
-- Python 3.6, 3.7
-- Django 1.11, 2.0, 2.1, 2.2.
+- Python 3.8+
+- Django 3.2+
 
 
 Installation
@@ -51,7 +51,3 @@ How to use it:
     queryset.random(5)  # to pass limited random records
     queryset.random(len(queryset)) # to get all random records
     queryset.random().values()  # to have access to other queryset methods 
-
-
-.. |Build status| image:: https://travis-ci.com/rremizov/django-random-queryset.svg?branch=master
-   :target: https://travis-ci.com/rremizov/django-random-queryset
