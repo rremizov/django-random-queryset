@@ -7,7 +7,7 @@ Pull random records using Django ORM.
 Requirements
 ------------
 
-- Python 2.7, 3.6, 3.7
+- Python 3.6, 3.7
 - Django 1.11, 2.0, 2.1, 2.2.
 
 
