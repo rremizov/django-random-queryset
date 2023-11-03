@@ -9,3 +9,4 @@ pytest-benchmark==3.4.1
 pytest-django==4.5.2
 pytest==7.0.1
 tox==4.11.3
+twine==4.0.2

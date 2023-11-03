@@ -14,4 +14,4 @@ build:
 	python setup.py sdist
 
 upload:
-	python setup.py sdist upload
+	twine upload dist/*
