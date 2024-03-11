@@ -1,7 +1,7 @@
 black==24.2.0
 flake8==7.0.0
 isort==5.13.2
-mypy==1.8.0
+mypy==1.9.0
 mysqlclient==2.2.4
 psycopg2-binary==2.9.9
 pylint-django==2.5.5
