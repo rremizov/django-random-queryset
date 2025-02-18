@@ -18,11 +18,6 @@ jobs:
           - postgresql
           - mysql
         env:
-          - python: "3.8"
-            tox-env: "py38-dj32"
-          - python: "3.8"
-            tox-env: "py38-dj40"
-
           - python: "3.9"
             tox-env: "py39-dj32"
           - python: "3.9"
@@ -39,11 +34,17 @@ jobs:
             tox-env: "py311-dj41"
           - python: "3.11"
             tox-env: "py311-dj42"
+          - python: "3.11"
+            tox-env: "py311-dj50"
+          - python: "3.11"
+            tox-env: "py311-dj51"
 
-#          - python: "3.12"
-#            tox-env: "py312-dj41"
-#          - python: "3.12"
-#            tox-env: "py312-dj42"
+          - python: "3.12"
+            tox-env: "py312-dj42"
+          - python: "3.12"
+            tox-env: "py311-dj50"
+          - python: "3.12"
+            tox-env: "py311-dj51"
 
     services:
       postgres:
