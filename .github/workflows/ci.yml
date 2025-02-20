@@ -9,7 +9,7 @@ name: CI
 jobs:
   run-tests:
     name: Run Tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     strategy:
       matrix:
@@ -42,9 +42,9 @@ jobs:
           - python: "3.12"
             tox-env: "py312-dj42"
           - python: "3.12"
-            tox-env: "py311-dj50"
+            tox-env: "py312-dj50"
           - python: "3.12"
-            tox-env: "py311-dj51"
+            tox-env: "py312-dj51"
 
     services:
       postgres:
