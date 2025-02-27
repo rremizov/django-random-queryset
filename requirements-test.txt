@@ -1,6 +1,6 @@
 black==25.1.0
 flake8==7.1.2
-isort==6.0.0
+isort==6.0.1
 mypy==1.15.0
 mysqlclient==2.2.7
 psycopg2-binary==2.9.10
