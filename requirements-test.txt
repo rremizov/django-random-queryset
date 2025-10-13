@@ -3,7 +3,7 @@ flake8==7.3.0
 isort==6.1.0
 mypy==1.18.2
 mysqlclient==2.2.7
-psycopg2-binary==2.9.10
+psycopg2-binary==2.9.11
 pylint-django==2.6.1
 pytest-benchmark==5.1.0
 pytest-django==4.11.1
