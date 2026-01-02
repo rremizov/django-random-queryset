@@ -8,5 +8,5 @@ pylint-django==2.7.0
 pytest-benchmark==5.2.3
 pytest-django==4.11.1
 pytest==8.4.2
-tox==4.30.3
+tox==4.32.0
 twine==6.2.0
