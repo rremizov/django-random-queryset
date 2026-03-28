@@ -7,8 +7,8 @@ Pull random records using Django ORM.
 Requirements
 ------------
 
-- Python 3.8+
-- Django 3.2+
+- Python 3.10+
+- Django 4.2+
 
 
 Installation
@@ -48,6 +48,6 @@ How to use it:
 
     queryset = Model.objects.filter(field=value)
     queryset.random()   # to get one random record
-    queryset.random(5)  # to pass limited random records
+    queryset.random(5)  # to get 5 random records
     queryset.random(len(queryset)) # to get all random records
     queryset.random().values()  # to have access to other queryset methods 

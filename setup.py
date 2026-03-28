@@ -11,7 +11,7 @@ setup(
     long_description=open("README.rst").read(),
     url="http://github.com/rremizov/django-random-queryset",
     packages=["django_random_queryset"],
-    install_requires=["django>=3.2"],
+    install_requires=["django>=4.2"],
     test_suite="tests.run_tests.run_all",
     classifiers=[
         "Development Status :: 3 - Alpha",
