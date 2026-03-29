@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="django-random-queryset",
-    version="0.2.0",
+    version="0.3.0",
     author="Roman Remizov",
     author_email="rremizov@yandex.ru",
     license="MIT",
