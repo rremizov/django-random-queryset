@@ -4,7 +4,7 @@ isort==8.0.1
 mypy==2.2.0
 mysqlclient==2.2.8
 psycopg2-binary==2.9.12
-pylint-django==2.7.0
+pylint-django==2.8.0
 pytest-benchmark==5.2.3
 pytest-django==4.12.0
 pytest==9.1.1
